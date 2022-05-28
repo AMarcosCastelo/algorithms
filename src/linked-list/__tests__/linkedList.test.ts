@@ -1,4 +1,4 @@
-import { MyLinkedList, NodeItem } from "../linkedList";
+import { MyLinkedList, NodeItem } from "..";
 
 describe('Linked list', () => {
   let linkedList: MyLinkedList;
