@@ -19,6 +19,6 @@ export const printReversedLinkedList = (linkedList: MyLinkedList) => {
   }
 
   while (stack.length) {
-    console.log(stack.pop()?.value);
+    console.log(stack.pop()!.value);
   }
 }

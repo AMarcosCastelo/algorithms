@@ -14,7 +14,7 @@ export class MyLinkedList {
     this._head = new NodeItem(null);
   }
 
-  insertNodeToTail(node: NodeItem) {
+  insertNodeToTail(node: NodeItem | null) {
     this.tail().next = node;
   }
 
