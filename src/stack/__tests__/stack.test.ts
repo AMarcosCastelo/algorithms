@@ -1,6 +1,6 @@
 import { datatype } from 'faker';
 
-import { printLinkedList, printReversedLinkedList } from "..";
+import { printLinkedList, printReversedLinkedList } from "../stack";
 import { MyLinkedList, NodeItem } from "../../linked-list";
 
 describe('Stack with a linked list', () => {
