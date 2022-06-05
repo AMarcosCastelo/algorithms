@@ -1,25 +1,25 @@
 export class Stack<T> {
-  private items: Record<number, T>;
-  private count: number;
+  private _items: Record<number, T>;
+  private _count: number;
 
   constructor () {
-    this.items = {};
-    this.count = 0;
+    this._items = {};
+    this._count = 0;
   }
 
   push(element: T) {
-    this.items[this.count] = element;
-    this.count++;
+    this._items[this._count] = element;
+    this._count++;
   }
 
   pop() {
     if (this.isEmpty()) {
       return undefined;
     }
-    this.count--;
-    const element = this.items[this.count];
+    this._count--;
+    const element = this._items[this._count];
 
-    delete this.items[this.count];
+    delete this._items[this._count];
     return element;
   }
 
@@ -28,15 +28,15 @@ export class Stack<T> {
       return undefined;
     }
 
-    return this.items[this.count - 1];
+    return this._items[this._count - 1];
   }
 
   size() {
-    return this.count;
+    return this._count;
   }
 
   isEmpty() {
-    return !this.count
+    return !this._count
   }
 
   toString() {
@@ -44,10 +44,10 @@ export class Stack<T> {
       return '';
     }
 
-    let objString = `${this.items[0]}`;
+    let objString = `${this._items[0]}`;
 
-    for (let i = 1; i < this.count; i++) {
-      objString = `${objString},${this.items[i]}`;
+    for (let i = 1; i < this._count; i++) {
+      objString = `${objString},${this._items[i]}`;
     
     }
 
@@ -55,7 +55,7 @@ export class Stack<T> {
   }
 
   clear() {
-    this.items = {};
-    this.count = 0;
+    this._items = {};
+    this._count = 0;
   }
 }
