@@ -1,4 +1,4 @@
-import { MyLinkedList, NodeItem } from '../linked-list';
+import { MyLinkedList } from "../../data-structure/linked-list";
 
 // verify if the linked list is a circle
 export const verifyIfIsCircle = (linkedList: MyLinkedList): boolean => {

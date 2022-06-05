@@ -1,5 +1,5 @@
 import { verifyIfIsCircle } from "..";
-import { MyLinkedList, NodeItem } from "../../linked-list";
+import { MyLinkedList, NodeItem } from "../../../data-structure/linked-list";
 
 describe('Fast and Slow pointer', () => {
   describe('verify if a linked list is circular' ,() => {
