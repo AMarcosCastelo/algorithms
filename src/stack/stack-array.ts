@@ -28,4 +28,12 @@ export class StackArray<T> {
   clear() {
     this.items = [];
   }
+
+  toArray() {
+    return this.items;
+  }
+
+  toString() {
+    return this.items.toString();
+  }
 }

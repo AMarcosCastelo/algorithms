@@ -105,4 +105,59 @@ describe('StackArray', () => {
     stack.clear();
     expect(stack.isEmpty()).toEqual(true);
   });
+
+  it('returns an Array', () => {
+    let stackArray = stack.toArray();
+    expect(stackArray.length).toEqual(0);
+
+    stack.push(1);
+    stack.push(2);
+
+    stackArray = stack.toArray();
+    expect(stackArray.length).toEqual(2);
+
+    let i = 1;
+    stackArray.forEach(e => {
+      expect(e).toEqual(i);
+      i++;
+    });
+  });
+
+  it('should returns toString primitive types', () => {
+    expect(stack.toString()).toEqual('');
+
+    stack.push(1);
+    expect(stack.toString()).toEqual('1');
+
+    stack.push(2);
+    expect(stack.toString()).toEqual('1,2');
+
+    stack.clear();
+    expect(stack.toString()).toEqual('');
+
+    const stackString = new StackArray<string>();
+    stackString.push('el1');
+    expect(stackString.toString()).toEqual('el1');
+
+    stackString.push('el2');
+    expect(stackString.toString()).toEqual('el1,el2');
+  });
+
+  it('returns toString objects', () => {
+
+    class MyObj {
+      constructor(public el1: any, public el2: any) { }
+      toString() {
+        return `${this.el1.toString()}|${this.el2.toString()}`;
+      }
+    }
+    const stackMyObj = new StackArray<MyObj>();
+    expect(stackMyObj.toString()).toEqual('');
+
+    stackMyObj.push(new MyObj(1, 2));
+    expect(stackMyObj.toString()).toEqual('1|2');
+
+    stackMyObj.push(new MyObj(3, 4));
+    expect(stackMyObj.toString()).toEqual('1|2,3|4');
+  });
 });
