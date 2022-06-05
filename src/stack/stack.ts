@@ -1,24 +1,61 @@
-import { MyLinkedList } from "../linked-list";
+export class Stack<T> {
+  private items: Record<number, T>;
+  private count: number;
 
-export const printLinkedList = (linkedList: MyLinkedList) => {
-  let node = linkedList.head();
-
-  while (node) {
-    console.log(node.value);
-    node = node.next;
-  }
-}
-
-export const printReversedLinkedList = (linkedList: MyLinkedList) => {
-  const stack = [];
-  let node = linkedList.head();
-
-  while (node) {
-    stack.push(node);
-    node = node.next;
+  constructor () {
+    this.items = {};
+    this.count = 0;
   }
 
-  while (stack.length) {
-    console.log(stack.pop()!.value);
+  push(element: T) {
+    this.items[this.count] = element;
+    this.count++;
+  }
+
+  pop() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+    this.count--;
+    const element = this.items[this.count];
+
+    delete this.items[this.count];
+    return element;
+  }
+
+  peek() {
+    if (this.isEmpty()) {
+      return undefined;
+    }
+
+    return this.items[this.count - 1];
+  }
+
+  size() {
+    return this.count;
+  }
+
+  isEmpty() {
+    return !this.count
+  }
+
+  toString() {
+    if (this.isEmpty()) {
+      return '';
+    }
+
+    let objString = `${this.items[0]}`;
+
+    for (let i = 1; i < this.count; i++) {
+      objString = `${objString},${this.items[i]}`;
+    
+    }
+
+    return objString;
+  }
+
+  clear() {
+    this.items = {};
+    this.count = 0;
   }
 }
