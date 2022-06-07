@@ -1,4 +1,5 @@
 import { StackArray } from '../stack-array';
+
 describe('StackArray', () => {
   let stack: StackArray<number>;
 

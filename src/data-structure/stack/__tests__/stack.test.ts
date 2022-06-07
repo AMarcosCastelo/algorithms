@@ -1,4 +1,5 @@
 import { Stack } from '../stack';
+
 describe('Stack', () => {
   let stack: Stack<number>;
 
