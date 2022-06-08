@@ -49,7 +49,7 @@ export class Queue<T> {
   }
 
   isEmpty() {
-    return !this._count;
+    return this.size() === 0;
   }
 
   size() {
