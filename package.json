@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "ts-node ./src/index.ts"
+    "start": "ts-node"
   },
   "keywords": [],
   "author": "Antonio Marcos Castelo (AMarcosCastelo)",
