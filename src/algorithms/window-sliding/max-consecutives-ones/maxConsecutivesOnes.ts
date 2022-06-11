@@ -1,4 +1,4 @@
-export const getMaxConsecutiveOnes = (numbers: number[], k: number): number => {
+export const getMaxConsecutiveOnes = (numbers: number[], k: number) => {
   let leftPoint = 0;
 
   for (let rightPoint = 0; rightPoint < numbers.length; rightPoint++) {
