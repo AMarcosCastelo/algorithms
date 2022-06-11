@@ -1,4 +1,4 @@
-import { verifyIfIsCircle } from "..";
+import { verifyIfIsCircle } from "../slowAndFastPointer";
 import { MyLinkedList, NodeItem } from "../../../data-structure/linked-list";
 
 describe('Fast and Slow pointer', () => {

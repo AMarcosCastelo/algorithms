@@ -1,4 +1,4 @@
-import { twoSum, twoSum2 } from "..";
+import { twoSum, twoSum2 } from "../twoSum";
 
 describe('Two sums o(n)', () => {
   it('should return a empty array if no numbers are found', () => {
