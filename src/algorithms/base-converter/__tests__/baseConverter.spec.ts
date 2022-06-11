@@ -1,4 +1,4 @@
-import { baseConverter } from '../base-converter';
+import { baseConverter } from '../baseConverter';
 
 describe('baseConverter', () => {
   it('should convert 100345, 2 -> 11000011111111001', () => {

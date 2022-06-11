@@ -1,4 +1,4 @@
-import { decimalToBinary } from '../decimal-to-binary'
+import { decimalToBinary } from '../decimalToBinary'
 describe('Base Converter', () => {
   it('decimalToBinary 1 -> 1', () => {
     expect(decimalToBinary(1)).toEqual('1');
